@@ -5,18 +5,18 @@ server:
       force: true
       charset: utf-8
       enabled: true
-  port: 8081
+  port: ${port:5000}
 #  tomcat:
 #    uri-encoding: UTF-8
 
 ###服务名称
 spring:
   application:
-    name: zookeeper-client-test
+    name: ${name:zookeeper-gateway}
   redis:
-    host: 127.0.0.1
-    port: 6379
-    password: wjp930514.
+    host: ${redisHost:192.168.1.3}
+    port: ${redisPort:6379}
+    password: ${redisPassword:wjp930514.}
   cloud:
     gateway:
       discovery:
